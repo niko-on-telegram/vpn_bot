@@ -16,13 +16,13 @@ Your VPN link is:
 
 """,
         Pre(
-            'ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpzWnNnU2RVYTFFUkxmTzBwcEdVQ1NR@35.226.250.3:1080#%F0%9F%9A%80%20Marz%20'
-            '%28123%29%20%5BShadowsocks%20-%20tcp%5D'
+            'vless://96588cfa-9303-4128-b7fb-c3e1796f8401@35.226.250.3:8443?security=reality&type=tcp&headerType'
+            '=&path=&host=&sni=discordapp.com&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=#%F0%9F'
+            '%9A%80%20Marz%20%28test_user%29%20%5BVLESS%20-%20tcp%5D'
         ),
     )
 
     await message.answer(**text.as_kwargs())
-
 
 # @router.message(Command('chats'))
 # async def set_settings(message: Message, chats_gateway: FromDishka[ChatsGateway]) -> None:
