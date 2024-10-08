@@ -1,6 +1,8 @@
-from typing import Tuple, Any
+from typing import Any
+from typing import Tuple
 
-from aiogram import Dispatcher, Bot
+from aiogram import Bot
+from aiogram import Dispatcher
 from dishka import make_async_container
 from dishka.integrations.aiogram import setup_dishka as setup_dishka_aiogram
 from fastapi import FastAPI
@@ -21,9 +23,7 @@ def app() -> tuple[Bot, Dispatcher]:
     container = make_async_container(DishkaProvider(config=config))
     logger.info('Initializing aiogram')
 
-    bot, dp = setup_aiogram(
-        config
-    )
+    bot, dp = setup_aiogram(config)
     setup_dishka_aiogram(container, router=dp, auto_inject=True)
     logger.info('Initialized')
     return bot, dp

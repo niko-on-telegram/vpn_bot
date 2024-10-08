@@ -1,5 +1,7 @@
 from aiogram.filters import BaseFilter
-from aiogram.types import Message, CallbackQuery, Chat
+from aiogram.types import CallbackQuery
+from aiogram.types import Chat
+from aiogram.types import Message
 
 
 class ChatIDFilter(BaseFilter):

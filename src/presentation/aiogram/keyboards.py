@@ -1,17 +1,17 @@
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from aiogram.utils.keyboard import KeyboardBuilder, InlineKeyboardBuilder
+from aiogram.types import InlineKeyboardButton
+from aiogram.types import InlineKeyboardMarkup
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from src.application.enums.send_order import SendOrderEnum
 
 
-def submit_keyboard(
-
-) -> InlineKeyboardMarkup:
+def submit_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardBuilder(
         markup=[
-            [InlineKeyboardButton(
-                text="yes", callback_data='yes'
-            ), InlineKeyboardButton(text="no", callback_data='no')]
+            [
+                InlineKeyboardButton(text='yes', callback_data='yes'),
+                InlineKeyboardButton(text='no', callback_data='no'),
+            ]
         ],
     ).as_markup()
 
@@ -22,12 +22,12 @@ def post_order_keyboard() -> InlineKeyboardMarkup:
             [
                 InlineKeyboardButton(
                     text=SendOrderEnum.OLDEST.value,
-                    callback_data=SendOrderEnum.OLDEST.value
+                    callback_data=SendOrderEnum.OLDEST.value,
                 ),
                 InlineKeyboardButton(
                     text=SendOrderEnum.RANDOM.value,
-                    callback_data=SendOrderEnum.RANDOM.value
-                )
+                    callback_data=SendOrderEnum.RANDOM.value,
+                ),
             ]
         ]
     ).as_markup()

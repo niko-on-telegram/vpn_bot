@@ -9,4 +9,3 @@ class ChatPairSchema:
     public_chat_id: str
     private_chat_id: str
     send_order: SendOrderEnum
-

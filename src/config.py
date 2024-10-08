@@ -80,7 +80,7 @@ def get_config() -> Config:
     """Парсинг dotenv и получение конфига."""
     config_path = os.path.abspath(os.getenv('CONFIG_PATH'))
     assert os.path.exists(config_path)
-    logging.info(f"{config_path=}")
+    logging.info(f'{config_path=}')
     dynaconf = Dynaconf(
         settings_files=[config_path],
         # envvar_prefix='RESENDER',

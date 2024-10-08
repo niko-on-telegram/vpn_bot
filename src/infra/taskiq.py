@@ -6,7 +6,7 @@ config = get_config()
 
 broker = ListQueueBroker(
     config.taskiq.url,
-    queue="posts",
+    queue='posts',
 )
 
 
